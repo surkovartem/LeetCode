@@ -55,4 +55,29 @@ public class ArrayStringTest {
       Assertions.assertArrayEquals(new int[]{1}, nums1);
     }
   }
+
+  @Nested
+  @DisplayName("27. Remove Element.")
+  class RemoveElement {
+
+    @Test
+    @DisplayName("Case 1")
+    public void removeElementCase1() {
+      int[] nums = new int[]{3, 2, 2, 3};
+      int val = 3;
+
+      int k = arrayString.removeElement(nums, val);
+      Assertions.assertEquals(2, k);
+    }
+
+    @Test
+    @DisplayName("Case 2")
+    public void removeElementCase2() {
+      int[] nums = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
+      int val = 2;
+
+      int k = arrayString.removeElement(nums, val);
+      Assertions.assertEquals(5, k);
+    }
+  }
 }
