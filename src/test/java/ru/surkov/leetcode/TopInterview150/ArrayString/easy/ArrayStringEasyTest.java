@@ -21,7 +21,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 1")
-    public void mergeSortedArrayCase1() {
+    public void case1() {
       int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
       int[] nums2 = new int[]{2, 5, 6};
       int m = 3;
@@ -33,7 +33,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 2")
-    public void mergeSortedArrayCase2() {
+    public void case2() {
       int[] nums1 = new int[]{1};
       int[] nums2 = new int[]{};
       int m = 1;
@@ -45,7 +45,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 3")
-    public void mergeSortedArrayCase3() {
+    public void case3() {
       int[] nums1 = new int[]{0};
       int[] nums2 = new int[]{1};
       int m = 0;
@@ -62,7 +62,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 1")
-    public void removeElementCase1() {
+    public void case1() {
       int[] nums = new int[]{3, 2, 2, 3};
       int val = 3;
 
@@ -72,7 +72,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 2")
-    public void removeElementCase2() {
+    public void case2() {
       int[] nums = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
       int val = 2;
 
@@ -87,7 +87,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 1")
-    public void removeDuplicatesCase1() {
+    public void case1() {
       int[] nums = new int[]{1, 1, 2};
       int k = arrayStringEasy.removeDuplicates(nums);
       Assertions.assertEquals(2, k);
@@ -95,7 +95,7 @@ public class ArrayStringEasyTest {
 
     @Test
     @DisplayName("Case 2")
-    public void removeDuplicatesCase2() {
+    public void case2() {
       int[] nums = new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
       int k = arrayStringEasy.removeDuplicates(nums);
       Assertions.assertEquals(5, k);

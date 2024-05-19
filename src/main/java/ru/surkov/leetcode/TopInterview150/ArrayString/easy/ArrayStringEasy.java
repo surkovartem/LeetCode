@@ -2,6 +2,9 @@ package ru.surkov.leetcode.TopInterview150.ArrayString.easy;
 
 import java.util.Arrays;
 
+/**
+ * Задачи сложности easy, Top Interview 150 (Leetcode).
+ */
 public class ArrayStringEasy {
 
   /**
