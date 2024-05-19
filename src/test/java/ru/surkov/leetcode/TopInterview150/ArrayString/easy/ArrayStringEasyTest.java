@@ -1,5 +1,7 @@
 package ru.surkov.leetcode.TopInterview150.ArrayString.easy;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
@@ -67,7 +69,7 @@ public class ArrayStringEasyTest {
       int val = 3;
 
       int k = arrayStringEasy.removeElement(nums, val);
-      Assertions.assertEquals(2, k);
+      assertEquals(2, k);
     }
 
     @Test
@@ -77,7 +79,7 @@ public class ArrayStringEasyTest {
       int val = 2;
 
       int k = arrayStringEasy.removeElement(nums, val);
-      Assertions.assertEquals(5, k);
+      assertEquals(5, k);
     }
   }
 
@@ -90,7 +92,7 @@ public class ArrayStringEasyTest {
     public void case1() {
       int[] nums = new int[]{1, 1, 2};
       int k = arrayStringEasy.removeDuplicates(nums);
-      Assertions.assertEquals(2, k);
+      assertEquals(2, k);
     }
 
     @Test
@@ -98,7 +100,28 @@ public class ArrayStringEasyTest {
     public void case2() {
       int[] nums = new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
       int k = arrayStringEasy.removeDuplicates(nums);
-      Assertions.assertEquals(5, k);
+      assertEquals(5, k);
+    }
+  }
+
+  @Nested
+  @DisplayName("169.Majority Element")
+  class MajorityElement {
+
+    @Test
+    @DisplayName("Case 1")
+    public void case1() {
+      int[] nums = new int[]{3, 2, 3};
+      int max = arrayStringEasy.majorityElement(nums);
+      assertEquals(3, max);
+    }
+
+    @Test
+    @DisplayName("Case 2")
+    public void case2() {
+      int[] nums = new int[]{2, 2, 1, 1, 1, 2, 2};
+      int max = arrayStringEasy.majorityElement(nums);
+      assertEquals(2, max);
     }
   }
 }

@@ -1,6 +1,7 @@
 package ru.surkov.leetcode.TopInterview150.ArrayString.medium;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -24,7 +25,7 @@ class ArrayStringMediumTest {
     public void case1() {
       int[] nums = new int[]{1, 1, 1, 2, 2, 3};
       int k = arrayStringMedium.removeDuplicates(nums);
-      Assertions.assertEquals(5, k);
+      assertEquals(5, k);
     }
 
     @Test
@@ -32,7 +33,7 @@ class ArrayStringMediumTest {
     public void case2() {
       int[] nums = new int[]{0, 0, 1, 1, 1, 1, 2, 3, 3};
       int k = arrayStringMedium.removeDuplicates(nums);
-      Assertions.assertEquals(7, k);
+     assertEquals(7, k);
     }
   }
 
