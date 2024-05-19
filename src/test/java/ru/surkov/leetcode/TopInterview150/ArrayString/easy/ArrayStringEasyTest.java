@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-public class ArrayStringTest {
+public class ArrayStringEasyTest {
 
-  ArrayString arrayString;
+  ArrayStringEasy arrayStringEasy;
 
   @BeforeEach
   public void setup() {
-    arrayString = new ArrayString();
+    arrayStringEasy = new ArrayStringEasy();
   }
 
   @Nested
@@ -27,7 +27,7 @@ public class ArrayStringTest {
       int m = 3;
       int n = 3;
 
-      arrayString.merge(nums1, m, nums2, n);
+      arrayStringEasy.merge(nums1, m, nums2, n);
       Assertions.assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, nums1);
     }
 
@@ -39,7 +39,7 @@ public class ArrayStringTest {
       int m = 1;
       int n = 0;
 
-      arrayString.merge(nums1, m, nums2, n);
+      arrayStringEasy.merge(nums1, m, nums2, n);
       Assertions.assertArrayEquals(new int[]{1}, nums1);
     }
 
@@ -51,7 +51,7 @@ public class ArrayStringTest {
       int m = 0;
       int n = 1;
 
-      arrayString.merge(nums1, m, nums2, n);
+      arrayStringEasy.merge(nums1, m, nums2, n);
       Assertions.assertArrayEquals(new int[]{1}, nums1);
     }
   }
@@ -66,7 +66,7 @@ public class ArrayStringTest {
       int[] nums = new int[]{3, 2, 2, 3};
       int val = 3;
 
-      int k = arrayString.removeElement(nums, val);
+      int k = arrayStringEasy.removeElement(nums, val);
       Assertions.assertEquals(2, k);
     }
 
@@ -76,7 +76,28 @@ public class ArrayStringTest {
       int[] nums = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
       int val = 2;
 
-      int k = arrayString.removeElement(nums, val);
+      int k = arrayStringEasy.removeElement(nums, val);
+      Assertions.assertEquals(5, k);
+    }
+  }
+
+  @Nested
+  @DisplayName("26. Remove duplicates.")
+  class RemoveDuplicates {
+
+    @Test
+    @DisplayName("Case 1")
+    public void removeDuplicatesCase1() {
+      int[] nums = new int[]{1, 1, 2};
+      int k = arrayStringEasy.removeDuplicates(nums);
+      Assertions.assertEquals(2, k);
+    }
+
+    @Test
+    @DisplayName("Case 2")
+    public void removeDuplicatesCase2() {
+      int[] nums = new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+      int k = arrayStringEasy.removeDuplicates(nums);
       Assertions.assertEquals(5, k);
     }
   }
