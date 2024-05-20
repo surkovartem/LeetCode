@@ -124,4 +124,25 @@ public class ArrayStringEasyTest {
       assertEquals(2, max);
     }
   }
+
+  @Nested
+  @DisplayName("121. Best Time to Buy and Sell Stock")
+  class BestTimeToBuy {
+
+    @Test
+    @DisplayName("Case 1")
+    public void case1() {
+      int[] prices = new int[]{7,1,5,3,6,4};
+      int profit = arrayStringEasy.maxProfit(prices);
+      assertEquals(5, profit);
+    }
+
+    @Test
+    @DisplayName("Case 2")
+    public void case2() {
+      int[] prices = new int[]{7,6,4,3,1};
+      int profit = arrayStringEasy.maxProfit(prices);
+      assertEquals(0, profit);
+    }
+  }
 }
